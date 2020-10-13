@@ -14,6 +14,8 @@
 </head>
 <body>
 <div id="app"></div>
+<!-- 在github上编辑 -->
+<script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 <script>
     window.$docsify = {
         name: 'leetcode题解',
@@ -29,24 +31,72 @@
         subMaxLevel: 2,
         //切换页面后是否自动跳转到页面顶部
         auto2top: true,
+        //封面
         coverpage: true,
         //使用相对路径
         // relativePath: true,
         plugins: [
             EditOnGithubPlugin.create('https://github.com/ShadowTwj/leetcode/tree/master/docs/')
-        ]
+        ],
+        // 完整配置参数
+        search: {
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            paths: [], // or 'auto'
+            placeholder: 'Type to search',
+
+            // 支持本地化
+            placeholder: {
+                '/zh-cn/': '搜索',
+                '/': 'Type to search'
+            },
+
+            noData: 'No Results!',
+
+            // 支持本地化
+            noData: {
+                '/zh-cn/': '找不到结果',
+                '/': 'No Results'
+            },
+
+            // 搜索标题的最大层级, 1 - 6
+            depth: 3,
+
+            // 是否隐藏其他侧边栏内容
+            hideOtherSidebarContent: false,
+
+            // 避免搜索索引冲突
+            // 同一域下的多个网站之间
+            namespace: 'website-1',
+
+            // 使用不同的索引作为路径前缀（namespaces）
+            // 注意：仅适用于 paths: 'auto' 模式
+            //
+            // 初始化索引时，我们从侧边栏查找第一个路径
+            // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+            pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+            // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+            // 匹配到的字符串将被用来识别索引
+            pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+        }
+    }
+    //离线模式
+    if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('sw.js')
     }
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-<!-- docsify-edit-on-github -->
-<script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
 <!--全文搜索,直接用官方提供的无法生效-->
-<script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
-<!--Java代码高亮-->
+<!--<script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<!--代码高亮-->
 <script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 <!-- 复制到剪贴板 -->
 <script src="//unpkg.com/docsify-copy-code"></script>
 <!-- 图片缩放 -->
 <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+<!-- emoji -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 </body>
 </html>
