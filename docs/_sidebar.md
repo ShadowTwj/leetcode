@@ -1,6 +1,4 @@
-# LeetCode题解
-
-> leetcode刷题记录
+<!-- docs/_sidebar.md -->
 
 * [leetcode](leetcode/)
 * [剑指offer](lcof/)
