@@ -30,6 +30,7 @@
 * [344 反转字符串(Reverse String)](/leetcode/leetcode344.md)
 * [450 删除二叉搜索树中的节点(Delete Node in a BST)](/leetcode/leetcode450.md)
 * [641 设计循环双端队列(Design Circular Deque)](/leetcode/leetcode641.md)
+* [654 最大二叉树(Maximum Binary Tree)](/leetcode/leetcode654.md)
 
 * [lcp6 拿硬币](/leetcode/lcp6.md)
 * [lcp7 传递信息](/leetcode/lcp7.md)
