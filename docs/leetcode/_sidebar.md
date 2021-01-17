@@ -14,6 +14,7 @@
 * [98 验证二叉搜索树(Validate Binary Search Tree)](/leetcode/leetcode98.md)
 * [102 二叉树的层次遍历(Binary Tree Postorder Traversal)](/leetcode/leetcode102.md)
 * [104 二叉树的最大深度(Binary Tree Postorder Traversal)](/leetcode/leetcode104.md)
+* [105 从前序与中序遍历序列构造二叉树(Construct Binary Tree from Preorder and Inorder Traversal)](/leetcode/leetcode105.md)
 * [110 平衡二叉树(Balanced Binary Tree)](/leetcode/leetcode110.md)
 * [114 二叉树展开为链表(Flatten Binary Tree to Linked List)](/leetcode/leetcode114.md)
 * [116 填充每个节点的下一个右侧节点指针(Populating Next Right Pointers in Each Node)](/leetcode/leetcode116.md)
