@@ -28,6 +28,7 @@
 * [169 多数元素(Majority Element)](/leetcode/leetcode169.md)
 * [206 反转链表(Reverse Linked List)](/leetcode/leetcode206.md)
 * [226 翻转二叉树(Invert Binary Tree)](/leetcode/leetcode226.md)
+* [230 二叉搜索树中第K小的元素(Kth Smallest Element in a BST)](/leetcode/leetcode230.md)
 * [239 滑动窗口最大值(Sliding Window Maximum)](/leetcode/leetcode239.md)
 * [344 反转字符串(Reverse String)](/leetcode/leetcode344.md)
 * [450 删除二叉搜索树中的节点(Delete Node in a BST)](/leetcode/leetcode450.md)
