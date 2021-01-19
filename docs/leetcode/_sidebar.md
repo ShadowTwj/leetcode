@@ -32,6 +32,7 @@
 * [239 滑动窗口最大值(Sliding Window Maximum)](/leetcode/leetcode239.md)
 * [344 反转字符串(Reverse String)](/leetcode/leetcode344.md)
 * [450 删除二叉搜索树中的节点(Delete Node in a BST)](/leetcode/leetcode450.md)
+* [538 把二叉搜索树转换为累加树(Convert BST to Greater Tree)](/leetcode/leetcode538.md)
 * [641 设计循环双端队列(Design Circular Deque)](/leetcode/leetcode641.md)
 * [652 寻找重复的子树(Find Duplicate Subtrees)](/leetcode/leetcode652.md)
 * [654 最大二叉树(Maximum Binary Tree)](/leetcode/leetcode654.md)

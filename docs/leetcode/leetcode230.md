@@ -79,7 +79,7 @@ public class Solution {
 }
 ```
 
-- 递归实现
+- 迭代实现
 
 ```java
 /**
