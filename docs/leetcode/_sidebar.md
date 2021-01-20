@@ -30,6 +30,7 @@
 * [226 翻转二叉树(Invert Binary Tree)](/leetcode/leetcode226.md)
 * [230 二叉搜索树中第K小的元素(Kth Smallest Element in a BST)](/leetcode/leetcode230.md)
 * [239 滑动窗口最大值(Sliding Window Maximum)](/leetcode/leetcode239.md)
+* [297 二叉树的序列化与反序列化(Serialize and Deserialize Binary Tree)](/leetcode/leetcode297.md)
 * [344 反转字符串(Reverse String)](/leetcode/leetcode344.md)
 * [450 删除二叉搜索树中的节点(Delete Node in a BST)](/leetcode/leetcode450.md)
 * [538 把二叉搜索树转换为累加树(Convert BST to Greater Tree)](/leetcode/leetcode538.md)
