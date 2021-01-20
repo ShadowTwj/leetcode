@@ -36,6 +36,8 @@
 * [641 设计循环双端队列(Design Circular Deque)](/leetcode/leetcode641.md)
 * [652 寻找重复的子树(Find Duplicate Subtrees)](/leetcode/leetcode652.md)
 * [654 最大二叉树(Maximum Binary Tree)](/leetcode/leetcode654.md)
+* [700 二叉搜索树中的搜索(Search in a Binary Search Tree)](/leetcode/leetcode700.md)
+* [701 二叉搜索树中的插入操作(Insert into a Binary Search Tree)](/leetcode/leetcode701.md)
 
 * [lcp6 拿硬币](/leetcode/lcp6.md)
 * [lcp7 传递信息](/leetcode/lcp7.md)
