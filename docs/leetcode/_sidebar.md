@@ -29,6 +29,7 @@
 * [206 反转链表(Reverse Linked List)](/leetcode/leetcode206.md)
 * [226 翻转二叉树(Invert Binary Tree)](/leetcode/leetcode226.md)
 * [230 二叉搜索树中第K小的元素(Kth Smallest Element in a BST)](/leetcode/leetcode230.md)
+* [236 二叉树的最近公共祖先(Lowest Common Ancestor of a Binary Tree)](/leetcode/leetcode236.md)
 * [239 滑动窗口最大值(Sliding Window Maximum)](/leetcode/leetcode239.md)
 * [297 二叉树的序列化与反序列化(Serialize and Deserialize Binary Tree)](/leetcode/leetcode297.md)
 * [341 扁平化嵌套列表迭代器(Flatten Nested List Iterator)](/leetcode/leetcode341.md)
