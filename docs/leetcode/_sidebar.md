@@ -27,6 +27,7 @@
 * [155 最小栈(Min Stack)](/leetcode/leetcode155.md)
 * [169 多数元素(Majority Element)](/leetcode/leetcode169.md)
 * [206 反转链表(Reverse Linked List)](/leetcode/leetcode206.md)
+* [222 完全二叉树的节点个数(Count Complete Tree Nodes)](/leetcode/leetcode222.md)
 * [226 翻转二叉树(Invert Binary Tree)](/leetcode/leetcode226.md)
 * [230 二叉搜索树中第K小的元素(Kth Smallest Element in a BST)](/leetcode/leetcode230.md)
 * [236 二叉树的最近公共祖先(Lowest Common Ancestor of a Binary Tree)](/leetcode/leetcode236.md)
