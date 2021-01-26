@@ -9,6 +9,7 @@
 * [41 缺失的第一个正数(First Missing Positive)](/leetcode/leetcode41.md)
 * [69 x 的平方根(Sqrt(x))](/leetcode/leetcode69.md)
 * [70 爬楼梯(Climbing Stairs)](/leetcode/leetcode70.md)
+* [72 编辑距离(Edit Distance)](/leetcode/leetcode72.md)
 * [75 颜色分类(Sort Colors)](/leetcode/leetcode75.md)
 * [94 二叉树的中序遍历(Binary Tree Inorder Traversal)](/leetcode/leetcode94.md)
 * [98 验证二叉搜索树(Validate Binary Search Tree)](/leetcode/leetcode98.md)
