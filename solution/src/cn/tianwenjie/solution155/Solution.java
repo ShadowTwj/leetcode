@@ -47,43 +47,43 @@ import java.util.List;
  * 不使用额外空间,保存差值
  */
 class MinStack {
-  List<Long> stack;
-  int minValue;
+    List<Long> stack;
+    int minValue;
 
-  /**
-   * initialize your data structure here.
-   */
-  public MinStack() {
-    stack = new ArrayList<>();
-    minValue = -1;
-  }
-
-  public void push(int x) {
-    if (stack.isEmpty()) {
-      stack.add(0L);
-      minValue = x;
-    } else {
-      stack.add((long) x - minValue);
-      minValue = Math.min(x, minValue);
+    /**
+     * initialize your data structure here.
+     */
+    public MinStack() {
+        stack = new ArrayList<>();
+        minValue = -1;
     }
-  }
 
-  public void pop() {
-    long diff = stack.remove(stack.size() - 1);
-    //判断是否需要修改minValue
-    if (diff < 0) {
-      minValue = (int) (minValue - diff);
+    public void push(int x) {
+        if (stack.isEmpty()) {
+            stack.add(0L);
+            minValue = x;
+        } else {
+            stack.add((long) x - minValue);
+            minValue = Math.min(x, minValue);
+        }
     }
-  }
 
-  public int top() {
-    long diff = stack.get(stack.size() - 1);
-    return diff < 0 ? minValue : (int) (minValue + diff);
-  }
+    public void pop() {
+        long diff = stack.remove(stack.size() - 1);
+        //判断是否需要修改minValue
+        if (diff < 0) {
+            minValue = (int) (minValue - diff);
+        }
+    }
 
-  public int getMin() {
-    return minValue;
-  }
+    public int top() {
+        long diff = stack.get(stack.size() - 1);
+        return diff < 0 ? minValue : (int) (minValue + diff);
+    }
+
+    public int getMin() {
+        return minValue;
+    }
 }
 
 
@@ -97,14 +97,14 @@ class MinStack {
  */
 
 public class Solution {
-  public static void main(String[] args) {
-    MinStack minStack = new MinStack();
-    minStack.push(-2);
-    minStack.push(0);
-    minStack.push(-1);
-    System.out.println(minStack.getMin());
-    System.out.println(minStack.top());
-    minStack.pop();
-    System.out.println(minStack.getMin());
-  }
+    public static void main(String[] args) {
+        MinStack minStack = new MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-1);
+        System.out.println(minStack.getMin());
+        System.out.println(minStack.top());
+        minStack.pop();
+        System.out.println(minStack.getMin());
+    }
 }

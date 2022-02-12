@@ -1,15 +1,18 @@
 ### 翻转字符串里的单词(Reverse Words in a String)
 
 #### 题目描述
+
 给定一个字符串，逐个翻转字符串中的每个单词。
 
 **示例1:**
+
 ```
 输入: "the sky is blue"
 输出: "blue is sky the"
 ```
 
 **示例2:**
+
 ```
 输入: "  hello world!  "
 输出: "world! hello"
@@ -17,6 +20,7 @@
 ```
 
 **示例3:**
+
 ```
 输入: "a good   example"
 输出: "example good a"
@@ -24,12 +28,15 @@
 ```
 
 **说明：**
+
 - 无空格字符构成一个单词。
 - 输入字符串可以在前面或者后面包含多余的空格，但是反转后的字符不能包括。
 - 如果两个单词间有多余的空格，将反转后单词间的空格减少到只含一个。
 
 #### 题解
+
 - api实现
+
 ```java
 class Solution {
   public String reverseWords(String s) {
@@ -42,6 +49,7 @@ class Solution {
 ```
 
 - 双指针实现
+
 ```java
 class Solution {
   public String reverseWords(String s) {
@@ -72,6 +80,7 @@ class Solution {
 ```
 
 - 栈实现列实现
+
 ```java
 class Solution {
   public String reverseWords(String s) {

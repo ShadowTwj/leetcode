@@ -1,6 +1,7 @@
 ### 验证二叉搜索树(Validate Binary Search Tree)
 
 #### 题目描述
+
 给定一个二叉树，判断其是否是一个有效的二叉搜索树。
 
 假设一个二叉搜索树具有如下特征：
@@ -10,6 +11,7 @@
 - 所有左子树和右子树自身必须也是二叉搜索树。
 
 **示例1:**
+
 ```
 输入:
     2
@@ -19,6 +21,7 @@
 ```
 
 **示例2:**
+
 ```
 输入:
     5
@@ -32,7 +35,9 @@
 ```
 
 #### 题解
+
 - 递归实现
+
 ```java
 /**
  * Definition for a binary tree node.
@@ -69,6 +74,7 @@ class Solution {
 ```
 
 - 中序遍历实现
+
 ```java
 /**
  * Definition for a binary tree node.

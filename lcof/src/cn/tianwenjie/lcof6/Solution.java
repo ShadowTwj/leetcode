@@ -9,17 +9,18 @@ import java.util.List;
  * Definition for singly-linked list.
  */
 class ListNode {
-  int val;
-  ListNode next;
+    int val;
+    ListNode next;
 
-  ListNode(int x) {
-    val = x;
-  }
+    ListNode(int x) {
+        val = x;
+    }
 }
-
 
 /**
  * 反转list实现
+ * <p>
+ * 递归实现
  */
 //public class Solution {
 //  public int[] reversePrint(ListNode head) {
@@ -44,7 +45,6 @@ class ListNode {
 //    System.out.println(Arrays.toString(solution.reversePrint(listNode)));
 //  }
 //}
-
 
 /**
  * 递归实现
@@ -79,24 +79,24 @@ class ListNode {
  * 辅助栈实现
  */
 public class Solution {
-  public int[] reversePrint(ListNode head) {
-    LinkedList<Integer> stack = new LinkedList<> ();
-    while (head != null) {
-      stack.addLast(head.val);
-      head = head.next;
+    public int[] reversePrint(ListNode head) {
+        LinkedList<Integer> stack = new LinkedList<>();
+        while (head != null) {
+            stack.addLast(head.val);
+            head = head.next;
+        }
+        int[] res = new int[stack.size()];
+        for (int i = 0; i < res.length; i++) {
+            res[i] = stack.removeLast();
+        }
+        return res;
     }
-    int[] res = new int[stack.size()];
-    for (int i = 0; i < res.length; i++) {
-      res[i] = stack.removeLast();
-    }
-    return res;
-  }
 
-  public static void main(String[] args) {
-    Solution solution = new Solution();
-    ListNode listNode = new ListNode(1);
-    listNode.next = new ListNode(3);
-    listNode.next.next = new ListNode(2);
-    System.out.println(Arrays.toString(solution.reversePrint(listNode)));
-  }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        ListNode listNode = new ListNode(1);
+        listNode.next = new ListNode(3);
+        listNode.next.next = new ListNode(2);
+        System.out.println(Arrays.toString(solution.reversePrint(listNode)));
+    }
 }

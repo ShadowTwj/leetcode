@@ -1,9 +1,8 @@
 package cn.tianwenjie.solution300;
 
-
 public class Solution {
-  public int lengthOfLIS(int[] nums) {
+    public int lengthOfLIS(int[] nums) {
 
-    return 0;
-  }
+        return 0;
+    }
 }

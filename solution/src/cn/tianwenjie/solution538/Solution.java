@@ -6,15 +6,14 @@ import java.util.LinkedList;
  * Definition for a binary tree node.
  */
 class TreeNode {
-  int val;
-  TreeNode left;
-  TreeNode right;
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-  TreeNode(int x) {
-    val = x;
-  }
+    TreeNode(int x) {
+        val = x;
+    }
 }
-
 
 /**
  * 迭代实现
@@ -50,20 +49,20 @@ class TreeNode {
  * 反序中序遍历
  */
 public class Solution {
-  int sum = 0;
+    int sum = 0;
 
-  public TreeNode convertBST(TreeNode root) {
-    if (root == null) {
-      return null;
+    public TreeNode convertBST(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        convertBST(root.right);
+        sum += root.val;
+        root.val = sum;
+        convertBST(root.left);
+
+        return root;
     }
-    convertBST(root.right);
-    sum += root.val;
-    root.val = sum;
-    convertBST(root.left);
 
-    return root;
-  }
-
-  public static void main(String[] args) {
-  }
+    public static void main(String[] args) {
+    }
 }

@@ -75,15 +75,15 @@ import java.util.Map;
  * 正则匹配
  */
 public class Solution {
-  public boolean isNumber(String s) {
-    if (s == null || s.length() == 0) {
-      return false;
+    public boolean isNumber(String s) {
+        if (s == null || s.length() == 0) {
+            return false;
+        }
+        return s.matches("^[-+]?(\\d+.?\\d*|.\\d+)([eE][+-]?\\d+|\\d+)?$");
     }
-    return s.matches("^[-+]?(\\d+.?\\d*|.\\d+)([eE][+-]?\\d+|\\d+)?$");
-  }
 
-  public static void main(String[] args) {
-    Solution solution = new Solution();
-    System.out.println(solution.isNumber("0"));
-  }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.isNumber("0"));
+    }
 }

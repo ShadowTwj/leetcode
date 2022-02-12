@@ -7,24 +7,23 @@ import java.util.List;
  * Definition for a binary tree node.
  */
 class TreeNode {
-  int val;
-  TreeNode left;
-  TreeNode right;
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-  TreeNode() {
-  }
+    TreeNode() {
+    }
 
-  TreeNode(int val) {
-    this.val = val;
-  }
+    TreeNode(int val) {
+        this.val = val;
+    }
 
-  TreeNode(int val, TreeNode left, TreeNode right) {
-    this.val = val;
-    this.left = left;
-    this.right = right;
-  }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
 }
-
 
 /**
  * 前序遍历实现
@@ -61,31 +60,31 @@ class TreeNode {
  * 递归实现
  */
 public class Solution {
-  public void flatten(TreeNode root) {
-    if (root == null) {
-      return;
+    public void flatten(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        flatten(root.left);
+        flatten(root.right);
+
+        TreeNode right = root.right;
+
+        root.right = root.left;
+        root.left = null;
+
+        TreeNode node = root;
+        while (node.right != null) {
+            node = node.right;
+        }
+
+        node.right = right;
     }
 
-    flatten(root.left);
-    flatten(root.right);
-
-    TreeNode right = root.right;
-
-    root.right = root.left;
-    root.left = null;
-
-    TreeNode node = root;
-    while (node.right != null) {
-      node = node.right;
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(3), new TreeNode(4)), new TreeNode(5, null, new TreeNode(6)));
+        solution.flatten(root);
+        System.out.println(root);
     }
-
-    node.right = right;
-  }
-
-  public static void main(String[] args) {
-    Solution solution = new Solution();
-    TreeNode root = new TreeNode(1, new TreeNode(2, new TreeNode(3), new TreeNode(4)), new TreeNode(5, null, new TreeNode(6)));
-    solution.flatten(root);
-    System.out.println(root);
-  }
 }

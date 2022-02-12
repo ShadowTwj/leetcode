@@ -1,9 +1,11 @@
 ### 最长有效括号(Longest Valid Parentheses)
 
 #### 题目描述
-给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。 
+
+给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
 
 **示例1:**
+
 ```
 输入: "(()"
 输出: 2
@@ -11,6 +13,7 @@
 ```
 
 **示例2:**
+
 ```
 输入: ")()())"
 输出: 4
@@ -18,7 +21,9 @@
 ```
 
 #### 题解
+
 - 栈实现
+
 ```java
 class Solution {
   public int longestValidParentheses(String s) {
@@ -45,6 +50,7 @@ class Solution {
 ```
 
 - 动态规划实现
+
 ```java
 class Solution {
   public int longestValidParentheses(String s) {

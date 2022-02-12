@@ -1,11 +1,11 @@
 package cn.tianwenjie.solution151;
 
-
 import java.util.Stack;
-
 
 /**
  * api实现
+ * <p>
+ * 双指针实现
  */
 //public class Solution {
 //  public String reverseWords(String s) {
@@ -22,7 +22,6 @@ import java.util.Stack;
 //    System.out.println(solution.reverseWords("a good   example"));
 //  }
 //}
-
 
 /**
  * 双指针实现
@@ -66,39 +65,39 @@ import java.util.Stack;
  * 栈实现
  */
 public class Solution {
-  public String reverseWords(String s) {
-    StringBuilder word = new StringBuilder();
-    Stack<String> stack = new Stack<>();
-    for (int i = 0; i < s.length(); i++) {
-      char c = s.charAt(i);
-      if (c != ' ') {
-        word.append(c);
-      } else if (word.length() != 0) {
-        stack.push(word.toString());
-        word.setLength(0);
-      }
-    }
-    if (word.length() != 0) {
-      stack.push(word.toString());
-      word.setLength(0);
-    }
-    while (!stack.isEmpty()) {
-      word.append(stack.pop()).append(" ");
-    }
-    if (word.length() != 0) {
-      word.setLength(word.length() - 1);
+    public String reverseWords(String s) {
+        StringBuilder word = new StringBuilder();
+        Stack<String> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c != ' ') {
+                word.append(c);
+            } else if (word.length() != 0) {
+                stack.push(word.toString());
+                word.setLength(0);
+            }
+        }
+        if (word.length() != 0) {
+            stack.push(word.toString());
+            word.setLength(0);
+        }
+        while (!stack.isEmpty()) {
+            word.append(stack.pop()).append(" ");
+        }
+        if (word.length() != 0) {
+            word.setLength(word.length() - 1);
+        }
+
+        return word.toString();
     }
 
-    return word.toString();
-  }
-
-  public static void main(String[] args) {
-    Solution solution = new Solution();
-    System.out.println(solution.reverseWords("the sky is blue"));
-    System.out.println(solution.reverseWords("  hello world!  "));
-    System.out.println(solution.reverseWords("a good   example"));
-    System.out.println(solution.reverseWords(""));
-    System.out.println(solution.reverseWords(" "));
-    System.out.println(solution.reverseWords("  "));
-  }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.reverseWords("the sky is blue"));
+        System.out.println(solution.reverseWords("  hello world!  "));
+        System.out.println(solution.reverseWords("a good   example"));
+        System.out.println(solution.reverseWords(""));
+        System.out.println(solution.reverseWords(" "));
+        System.out.println(solution.reverseWords("  "));
+    }
 }

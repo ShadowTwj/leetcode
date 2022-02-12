@@ -2,6 +2,10 @@ package cn.tianwenjie.solution169;
 
 /**
  * 排序实现
+ * <p>
+ * 排序进阶
+ * <p>
+ * 哈希表实现
  */
 //public class Solution {
 //  public int majorityElement(int[] nums) {
@@ -34,7 +38,6 @@ package cn.tianwenjie.solution169;
 //  }
 //}
 
-
 /**
  * 排序进阶
  */
@@ -52,7 +55,6 @@ package cn.tianwenjie.solution169;
 //    System.out.println(solution.majorityElement(nums2));
 //  }
 //}
-
 
 /**
  * 哈希表实现
@@ -93,27 +95,27 @@ package cn.tianwenjie.solution169;
  * 核心思想：多数元素和其他元素相互抵消，剩下的一定是最少1个的多数，
  */
 public class Solution {
-  public int majorityElement(int[] nums) {
-    int num = nums[0];
-    int count = 1;
-    for (int i = 0; i < nums.length; i++) {
-      if (num == nums[i]) {
-        count++;
-      } else {
-        if (--count == 0) {
-          num = nums[i];
-          count = 1;
+    public int majorityElement(int[] nums) {
+        int num = nums[0];
+        int count = 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (num == nums[i]) {
+                count++;
+            } else {
+                if (--count == 0) {
+                    num = nums[i];
+                    count = 1;
+                }
+            }
         }
-      }
+        return num;
     }
-    return num;
-  }
 
-  public static void main(String[] args) {
-    int[] nums = new int[] {3, 2, 3};
-    int[] nums2 = new int[] {2, 2, 1, 1, 1, 2, 2};
-    Solution solution = new Solution();
-    System.out.println(solution.majorityElement(nums));
-    System.out.println(solution.majorityElement(nums2));
-  }
+    public static void main(String[] args) {
+        int[] nums = new int[] {3, 2, 3};
+        int[] nums2 = new int[] {2, 2, 1, 1, 1, 2, 2};
+        Solution solution = new Solution();
+        System.out.println(solution.majorityElement(nums));
+        System.out.println(solution.majorityElement(nums2));
+    }
 }

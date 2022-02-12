@@ -38,36 +38,36 @@ import java.util.LinkedList;
  * 双端队列实现
  */
 public class Solution {
-  public int[] maxSlidingWindow(int[] nums, int k) {
-    if (nums.length * k == 0) {
-      return new int[0];
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        if (nums.length * k == 0) {
+            return new int[0];
+        }
+
+        int[] res = new int[nums.length - k + 1];
+        Deque<Integer> deque = new LinkedList<>();
+        for (int i = 0; i < nums.length; i++) {
+            //形成滑动窗口后每次移除左边的元素
+            if (!deque.isEmpty() && deque.getFirst() < i - k + 1) {
+                deque.removeFirst();
+            }
+
+            //deque中保留最大的
+            while (!deque.isEmpty() && nums[deque.getLast()] < nums[i]) {
+                deque.removeLast();
+            }
+            deque.addLast(i);
+
+            //形成滑动窗口后再取最大值
+            if (i >= k - 1) {
+                res[i - k + 1] = nums[deque.getFirst()];
+            }
+        }
+
+        return res;
     }
 
-    int[] res = new int[nums.length - k + 1];
-    Deque<Integer> deque = new LinkedList<>();
-    for (int i = 0; i < nums.length; i++) {
-      //形成滑动窗口后每次移除左边的元素
-      if (!deque.isEmpty() && deque.getFirst() < i - k + 1) {
-        deque.removeFirst();
-      }
-
-      //deque中保留最大的
-      while (!deque.isEmpty() && nums[deque.getLast()] < nums[i]) {
-        deque.removeLast();
-      }
-      deque.addLast(i);
-
-      //形成滑动窗口后再取最大值
-      if (i >= k - 1) {
-        res[i - k + 1] = nums[deque.getFirst()];
-      }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(Arrays.toString(solution.maxSlidingWindow(new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3)));
     }
-
-    return res;
-  }
-
-  public static void main(String[] args) {
-    Solution solution = new Solution();
-    System.out.println(Arrays.toString(solution.maxSlidingWindow(new int[] {1, 3, -1, -3, 5, 3, 6, 7}, 3)));
-  }
 }

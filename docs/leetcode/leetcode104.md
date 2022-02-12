@@ -1,6 +1,7 @@
 ### 二叉树的最大深度(Binary Tree Postorder Traversal)
 
 #### 题目描述
+
 给定一个二叉树，找出其最大深度。
 
 二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
@@ -9,6 +10,7 @@
 
 **示例:**
 给定二叉树 `[3,9,20,null,null,15,7]`，
+
 ```
     3
    / \
@@ -16,10 +18,13 @@
     /  \
    15   7
 ```
+
 返回它的最大深度 3 。
 
 #### 题解
+
 - 递归实现
+
 ```java
 /**
  * Definition for a binary tree node.
@@ -45,6 +50,7 @@ class Solution {
 ```
 
 - 迭代实现(广度优先搜索)
+
 ```java
 /**
  * Definition for a binary tree node.

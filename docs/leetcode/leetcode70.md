@@ -1,13 +1,15 @@
 ### 爬楼梯(Climbing Stairs)
 
 #### 题目描述
+
 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
 
 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
 
-**注意：** 给定 n 是一个正整数。 
+**注意：** 给定 n 是一个正整数。
 
 **示例1:**
+
 ```
 输入： 2
 输出： 2
@@ -17,6 +19,7 @@
 ```
 
 **示例2:**
+
 ```
 输入： 3
 输出： 3
@@ -27,7 +30,9 @@
 ```
 
 #### 题解
+
 - 递归实现(会超时)
+
 ```java
 class Solution {
   public int climbStairs(int n) {
@@ -48,6 +53,7 @@ class Solution {
 ```
 
 - 动态规划实现
+
 ```java
 class Solution {
   public int climbStairs(int n) {

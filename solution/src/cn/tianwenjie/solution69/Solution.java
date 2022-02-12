@@ -39,23 +39,23 @@ package cn.tianwenjie.solution69;
  * 牛顿迭代实现
  */
 public class Solution {
-  public int mySqrt(int x) {
-    if (x < 2) {
-      return x;
+    public int mySqrt(int x) {
+        if (x < 2) {
+            return x;
+        }
+        double x0 = x;
+        double x1 = (x0 + x / x0) / 2.0;
+        while (Math.abs(x0 - x1) >= 1) {
+            x0 = x1;
+            x1 = (x0 + x / x0) / 2.0;
+        }
+        return (int) x1;
     }
-    double x0 = x;
-    double x1 = (x0 + x / x0) / 2.0;
-    while (Math.abs(x0 - x1) >= 1) {
-      x0 = x1;
-      x1 = (x0 + x / x0) / 2.0;
-    }
-    return (int) x1;
-  }
 
-  public static void main(String[] args) {
-    Solution solution = new Solution();
-    System.out.println(solution.mySqrt(4));
-    System.out.println(solution.mySqrt(8));
-    System.out.println(solution.mySqrt(2147395599));
-  }
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.mySqrt(4));
+        System.out.println(solution.mySqrt(8));
+        System.out.println(solution.mySqrt(2147395599));
+    }
 }

@@ -1,14 +1,16 @@
 ### 最小栈(Min Stack)
 
 #### 题目描述
+
 设计一个支持`push` ，`pop` ，`top` 操作，并能在常数时间内检索到最小元素的栈。
+
 - `push(x)` —— 将元素 x 推入栈中。
 - `pop()` —— 删除栈顶的元素。
 - `top()` —— 获取栈顶元素。
 - `getMin()` —— 检索栈中的最小元素。
 
-
 **示例:**
+
 ```
 输入：
 ["MinStack","push","push","push","getMin","pop","top","getMin"]
@@ -29,10 +31,13 @@ minStack.getMin();   --> 返回 -2.
 ```
 
 **说明：**
+
 - `pop`、`top` 和 `getMin` 操作总是在 非空栈 上调用。
 
 #### 题解
+
 - 两个辅助栈实现
+
 ```java
 class MinStack {
   LinkedList<Integer> stack1, stack2;
@@ -69,7 +74,9 @@ class MinStack {
   }
 }
 ```
+
 - 不使用额外空间,保存差值
+
 ```java
 class MinStack {
   List<Long> stack;

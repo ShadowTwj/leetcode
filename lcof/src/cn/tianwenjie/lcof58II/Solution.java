@@ -14,11 +14,11 @@ package cn.tianwenjie.lcof58II;
  * 遍历实现
  */
 public class Solution {
-  public String reverseLeftWords(String s, int n) {
-    StringBuilder sb = new StringBuilder();
-    for (int i = n; i < n + s.length(); i++) {
-      sb.append(s.charAt(i % s.length()));
+    public String reverseLeftWords(String s, int n) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = n; i < n + s.length(); i++) {
+            sb.append(s.charAt(i % s.length()));
+        }
+        return sb.toString();
     }
-    return sb.toString();
-  }
 }

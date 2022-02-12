@@ -2,99 +2,99 @@ package cn.tianwenjie.solution641;
 
 class MyCircularDeque {
 
-  int[] data;
-  int capacity;
-  int head = 0;
-  int tail = 0;
+    int[] data;
+    int capacity;
+    int head = 0;
+    int tail = 0;
 
-  /**
-   * Initialize your data structure here. Set the size of the deque to be k.
-   */
-  public MyCircularDeque(int k) {
-    capacity = k + 1;
-    data = new int[capacity];
-  }
-
-  /**
-   * Adds an item at the front of Deque. Return true if the operation is successful.
-   */
-  public boolean insertFront(int value) {
-    if (this.isFull()) {
-      return false;
+    /**
+     * Initialize your data structure here. Set the size of the deque to be k.
+     */
+    public MyCircularDeque(int k) {
+        capacity = k + 1;
+        data = new int[capacity];
     }
-    head = (head - 1 + capacity) % capacity;
-    data[head] = value;
-    return true;
-  }
 
-  /**
-   * Adds an item at the rear of Deque. Return true if the operation is successful.
-   */
-  public boolean insertLast(int value) {
-    if (this.isFull()) {
-      return false;
+    /**
+     * Adds an item at the front of Deque. Return true if the operation is successful.
+     */
+    public boolean insertFront(int value) {
+        if (this.isFull()) {
+            return false;
+        }
+        head = (head - 1 + capacity) % capacity;
+        data[head] = value;
+        return true;
     }
-    data[tail] = value;
-    tail = (tail + 1) % capacity;
-    return true;
-  }
 
-  /**
-   * Deletes an item from the front of Deque. Return true if the operation is successful.
-   */
-  public boolean deleteFront() {
-    if (this.isEmpty()) {
-      return false;
+    /**
+     * Adds an item at the rear of Deque. Return true if the operation is successful.
+     */
+    public boolean insertLast(int value) {
+        if (this.isFull()) {
+            return false;
+        }
+        data[tail] = value;
+        tail = (tail + 1) % capacity;
+        return true;
     }
-    head = (head + 1) % capacity;
-    return true;
-  }
 
-  /**
-   * Deletes an item from the rear of Deque. Return true if the operation is successful.
-   */
-  public boolean deleteLast() {
-    if (this.isEmpty()) {
-      return false;
+    /**
+     * Deletes an item from the front of Deque. Return true if the operation is successful.
+     */
+    public boolean deleteFront() {
+        if (this.isEmpty()) {
+            return false;
+        }
+        head = (head + 1) % capacity;
+        return true;
     }
-    tail = (tail - 1 + capacity) % capacity;
-    return true;
-  }
 
-  /**
-   * Get the front item from the deque.
-   */
-  public int getFront() {
-    if (this.isEmpty()) {
-      return -1;
+    /**
+     * Deletes an item from the rear of Deque. Return true if the operation is successful.
+     */
+    public boolean deleteLast() {
+        if (this.isEmpty()) {
+            return false;
+        }
+        tail = (tail - 1 + capacity) % capacity;
+        return true;
     }
-    return data[head];
-  }
 
-  /**
-   * Get the last item from the deque.
-   */
-  public int getRear() {
-    if (this.isEmpty()) {
-      return -1;
+    /**
+     * Get the front item from the deque.
+     */
+    public int getFront() {
+        if (this.isEmpty()) {
+            return -1;
+        }
+        return data[head];
     }
-    return data[(tail - 1 + capacity) % capacity];
 
-  }
+    /**
+     * Get the last item from the deque.
+     */
+    public int getRear() {
+        if (this.isEmpty()) {
+            return -1;
+        }
+        return data[(tail - 1 + capacity) % capacity];
 
-  /**
-   * Checks whether the circular deque is empty or not.
-   */
-  public boolean isEmpty() {
-    return head == tail;
-  }
+    }
 
-  /**
-   * Checks whether the circular deque is full or not.
-   */
-  public boolean isFull() {
-    return (tail + 1) % capacity == head;
-  }
+    /**
+     * Checks whether the circular deque is empty or not.
+     */
+    public boolean isEmpty() {
+        return head == tail;
+    }
+
+    /**
+     * Checks whether the circular deque is full or not.
+     */
+    public boolean isFull() {
+        return (tail + 1) % capacity == head;
+    }
 }
 
 
@@ -112,16 +112,16 @@ class MyCircularDeque {
  */
 
 public class Solution {
-  public static void main(String[] args) {
-    MyCircularDeque circularDeque = new MyCircularDeque(3); // 设置容量大小为3
-    System.out.println(circularDeque.insertLast(1));              // 返回 true
-    System.out.println(circularDeque.insertLast(2));              // 返回 true
-    System.out.println(circularDeque.insertFront(3));              // 返回 true
-    System.out.println(circularDeque.insertFront(4));              // 已经满了，返回 false
-    System.out.println(circularDeque.getRear());        // 返回 2
-    System.out.println(circularDeque.isFull());              // 返回 true
-    System.out.println(circularDeque.deleteLast());            // 返回 true
-    System.out.println(circularDeque.insertFront(4));              // 返回 true
-    System.out.println(circularDeque.getFront());      // 返回 4
-  }
+    public static void main(String[] args) {
+        MyCircularDeque circularDeque = new MyCircularDeque(3); // 设置容量大小为3
+        System.out.println(circularDeque.insertLast(1));              // 返回 true
+        System.out.println(circularDeque.insertLast(2));              // 返回 true
+        System.out.println(circularDeque.insertFront(3));              // 返回 true
+        System.out.println(circularDeque.insertFront(4));              // 已经满了，返回 false
+        System.out.println(circularDeque.getRear());        // 返回 2
+        System.out.println(circularDeque.isFull());              // 返回 true
+        System.out.println(circularDeque.deleteLast());            // 返回 true
+        System.out.println(circularDeque.insertFront(4));              // 返回 true
+        System.out.println(circularDeque.getFront());      // 返回 4
+    }
 }
