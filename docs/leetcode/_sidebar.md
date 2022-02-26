@@ -5,6 +5,7 @@
 * [20 有效的括号(Merge Two Sorted Lists)](/leetcode/leetcode20.md)
 * [21 合并两个有序链表(Merge Two Sorted Lists)](/leetcode/leetcode21.md)
 * [23 合并K个排序链表(Merge k Sorted Lists)](/leetcode/leetcode23.md)
+* [26 删除有序数组中的重复项(Remove Duplicates from Sorted Array)](/leetcode/leetcode26.md)
 * [32 最长有效括号(Longest Valid Parentheses)](/leetcode/leetcode32.md)
 * [41 缺失的第一个正数(First Missing Positive)](/leetcode/leetcode41.md)
 * [69 x 的平方根(Sqrt(x))](/leetcode/leetcode69.md)
