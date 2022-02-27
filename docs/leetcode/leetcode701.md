@@ -6,7 +6,7 @@
 
 注意，可能存在多种有效的插入方式，只要树在插入后仍保持为二叉搜索树即可。 你可以返回 **任意有效的结果** 。
 
-实例1:
+示例1:
 ![images](https://assets.leetcode.com/uploads/2020/10/05/insertbst.jpg)
 
 ```
@@ -17,14 +17,14 @@
 
 ![images](https://assets.leetcode.com/uploads/2020/10/05/bst.jpg)
 
-实例2:
+示例2:
 
 ```
 输入：root = [40,20,60,10,30,50,70], val = 25
 输出：[40,20,60,10,30,50,70,null,null,25]
 ```
 
-实例3:
+示例3:
 
 ```
 输入：root = [4,2,7,1,3,null,null,null,null,null,null], val = 5
@@ -59,19 +59,19 @@
  * }
  */
 class Solution {
-  public TreeNode insertIntoBST(TreeNode root, int val) {
-    if (root == null) {
-      return new TreeNode(val);
-    }
+    public TreeNode insertIntoBST(TreeNode root, int val) {
+        if (root == null) {
+            return new TreeNode(val);
+        }
 
-    if (root.val > val) {
-      root.left = insertIntoBST(root.left, val);
-    } else {
-      root.right = insertIntoBST(root.right, val);
-    }
+        if (root.val > val) {
+            root.left = insertIntoBST(root.left, val);
+        } else {
+            root.right = insertIntoBST(root.right, val);
+        }
 
-    return root;
-  }
+        return root;
+    }
 }
 ```
 
@@ -94,30 +94,30 @@ class Solution {
  * }
  */
 class Solution {
-  public TreeNode insertIntoBST(TreeNode root, int val) {
-    if (root == null) {
-      return new TreeNode(val);
-    }
-    TreeNode node = root;
-    while (true) {
-      if (node.val > val) {
-        if (node.left == null) {
-          node.left = new TreeNode(val);
-          break;
-        } else {
-          node = node.left;
+    public TreeNode insertIntoBST(TreeNode root, int val) {
+        if (root == null) {
+            return new TreeNode(val);
         }
-      } else {
-        if (node.right == null) {
-          node.right = new TreeNode(val);
-          break;
-        } else {
-          node = node.right;
+        TreeNode node = root;
+        while (true) {
+            if (node.val > val) {
+                if (node.left == null) {
+                    node.left = new TreeNode(val);
+                    break;
+                } else {
+                    node = node.left;
+                }
+            } else {
+                if (node.right == null) {
+                    node.right = new TreeNode(val);
+                    break;
+                } else {
+                    node = node.right;
+                }
+            }
         }
-      }
-    }
 
-    return root;
-  }
+        return root;
+    }
 }
 ```
