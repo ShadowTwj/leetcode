@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 脚本用于自动生成 docs/leetcode/_sidebar.md 文件
-# 扫描 docs/leetcode 目录下的所有 .md 文件（除了 README.md 和 _sidebar_backup.md）
+# 扫描 docs/leetcode 目录下的所有 .md 文件（除了 README.md）
 # 提取文件标题并生成侧边栏格式
 
 #LEETCODE_DIR="docs/leetcode"
