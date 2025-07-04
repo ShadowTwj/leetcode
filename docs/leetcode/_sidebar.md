@@ -50,6 +50,6 @@
 * [700 二叉搜索树中的搜索(Search in a Binary Search Tree)](/leetcode/leetcode700.md)
 * [701 二叉搜索树中的插入操作(Insert into a Binary Search Tree)](/leetcode/leetcode701.md)
 * [1114 按序打印(Print in Order)](/leetcode/leetcode1114.md)
-* [[3158]求出出现两次数字的 XOR 值](/leetcode/[3158]求出出现两次数字的 XOR 值.md)
+* [[3158]求出出现两次数字的XOR值](/leetcode/[3158]求出出现两次数字的 XOR 值.md)
 * [[3200]三角形的最大高度](/leetcode/[3200]三角形的最大高度.md)
 
