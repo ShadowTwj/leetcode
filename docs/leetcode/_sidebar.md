@@ -37,6 +37,7 @@
 * [222 完全二叉树的节点个数(Count Complete Tree Nodes)](/leetcode/leetcode222.md)
 * [226 翻转二叉树(Invert Binary Tree)](/leetcode/leetcode226.md)
 * [230 二叉搜索树中第K小的元素(Kth Smallest Element in a BST)](/leetcode/leetcode230.md)
+* [[234]回文链表](/leetcode/[234]回文链表.md)
 * [236 二叉树的最近公共祖先(Lowest Common Ancestor of a Binary Tree)](/leetcode/leetcode236.md)
 * [239 滑动窗口最大值(Sliding Window Maximum)](/leetcode/leetcode239.md)
 * [297 二叉树的序列化与反序列化(Serialize and Deserialize Binary Tree)](/leetcode/leetcode297.md)
